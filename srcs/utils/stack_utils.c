@@ -6,11 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:28:53 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/01/29 01:07:54 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/01/31 10:20:18 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap/includes/push_swap.h"
+#include "/mnt/homes/oait-si-/Desktop/push__swap/includes/push_swap.h"
  
 int	is_sorted(t_stack *stack)
 {

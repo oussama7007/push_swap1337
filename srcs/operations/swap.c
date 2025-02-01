@@ -6,51 +6,45 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 14:09:21 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/01/30 17:54:07 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/01/31 11:46:40 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap/includes/push_swap.h"
+#include "/mnt/homes/oait-si-/Desktop/push__swap/includes/push_swap.h"
 
-void     swap_a(t_stack **a)
+
+static  void    swap(t_stack **stack)
 {
     t_stack *tmp;
     
+    tmp = *stack;
+    *stack = (*stack)->next;
+    tmp->next = (*stack)->next;
+    (*stack)->next = tmp;
+}
+void     swap_a(t_stack **a)
+{
+    
     if(!*a || !(*a)->next)
         return;
-    tmp = *a;
-    *a = (*a)->next;
-    tmp->next = (*a)->next;
-    (*a)->next = tmp;
+    swap(a);
     write(1,"sa\n", 3); 
 }
 void    swap_b(t_stack **b)
 {
-    t_stack *tmp;
+
     
     if(!*b || !(*b)->next)
         return;
-    tmp = (*b);
-    (*b) = (*b)->next;
-    tmp->next = (*b)->next;
-    (*b)->next = tmp;
+    swap(b);
     write(1,"sb\n", 3);
 }
 
-void    ss(t_stack **a, t_stack **b)
+void ss(t_stack **a, t_stack **b) 
 {
-    t_stack *tmp;
-    t_stack *mp;
-    
-    if(!*b || !(*b)->next || !*a || !(*a)->next)
+    if (!*a || !(*a)->next || !*b || !(*b)->next)
         return;
-    tmp = (*b);
-    (*b) = (*b)->next;
-    tmp->next = (*b)->next;
-    (*b)->next = tmp;
-    mp = *a;
-    *a = (*a)->next;
-    mp->next = (*a)->next;
-    (*a)->next = mp;
-    write(1,"ss\n", 3);
+    swap(a);
+    swap(b); 
+    write(1, "ss\n", 3);   
 }

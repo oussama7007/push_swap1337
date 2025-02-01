@@ -6,12 +6,12 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:58:00 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/01/29 01:14:56 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/01 16:27:18 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "../push_swap/includes/push_swap.h"
+#include "/mnt/homes/oait-si-/Desktop/push__swap/includes/push_swap.h"
 
 static void     clean_and_exit(t_stack **a, t_stack **b, int exit_code)
 {
