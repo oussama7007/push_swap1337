@@ -6,11 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:28:53 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/01/31 10:20:18 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/02 15:32:42 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/mnt/homes/oait-si-/Desktop/push__swap/includes/push_swap.h"
+#include "../includes/push_swap.h"
  
 int	is_sorted(t_stack *stack)
 {
@@ -53,4 +53,19 @@ t_stack *stack_last(t_stack *stack)
     while (stack->next)
         stack = stack->next;
     return (stack);
+}
+int	stack_min(t_stack *stack)
+{
+    int	min;
+
+    if (!stack)
+        return (0);
+    min = stack->value;
+    while (stack)
+    {
+        if (stack->value < min)
+            min = stack->value;
+        stack = stack->next;
+    }
+    return (min);
 }

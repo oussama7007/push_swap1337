@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:58:00 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/01 16:27:18 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/02 23:51:17 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ static int    sort_stack(t_stack **a, t_stack **b)
 {
     int size;
 
+      
     size = stack_size(*a);
+    if (!*a || !(*a)->next)
+        return (0);
     if(is_sorted(*a))
         return 0;
     else if(size == 2)
@@ -51,7 +54,7 @@ int main(int ac, char **av)
     t_stack *b;
     
     if(ac < 2)
-        return(1);
+        return(0);
     a = parse_input(ac, av);
     b = NULL;
     if(!a)
