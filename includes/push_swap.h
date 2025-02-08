@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/02 15:42:12 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/08 17:35:21 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include "../libft/libft.h"
 
 typedef struct s_stack
 {

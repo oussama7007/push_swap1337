@@ -13,7 +13,8 @@ SRCS = srsc/main.c \
        srcs/sorting/small_sort.c \
        srcs/sorting/large_sort.c \
        srcs/utils/stack_utils.c \
-       srcs/utils/error_utils.c
+       srcs/utils/error_utils.c \
+	   libft/ft_atoi.c 
 
 objcts = $(SRCS:.c=.o)
 
