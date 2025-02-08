@@ -2,9 +2,9 @@ NAME  = push_swap
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror 
 
-SRCS = srsc/main.c \
-	   srsc/operations/push.c \
-	   srsc/operations/swap.c \
+SRCS = srcs/main.c \
+	   srcs/operations/push.c \
+	   srcs/operations/swap.c \
 	   srcs/operations/rotate.c \
 	   srcs/operations/reverse_rotate.c \
        srcs/parsing/parsing.c \
@@ -28,7 +28,7 @@ NAME: $(objcts)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	rm -f $(SRCS)
+	rm -f $(objcts)
 fclean: clean 
 	rm -f $(NAME)
 
