@@ -19,6 +19,7 @@ SRCS = srcs/main.c \
 objcts = $(SRCS:.c=.o)
 
 INCLUDES = -I includes
+
 all: $(NAME)
 
 NAME: $(objcts)

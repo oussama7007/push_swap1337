@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:28:53 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/09 10:34:36 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/10 00:43:41 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,21 @@ int    sort_stack(t_stack **a, t_stack **b)
     if (!is_sorted(*a))
         return (1);
     return (0);
+}
+void add_to_stack(t_stack **stack, int value)
+{
+    t_stack *new_node = (t_stack *)malloc(sizeof(t_stack));
+    if (!new_node)
+        return;
+    new_node->value = value;
+    new_node->next = NULL;
+    if (!*stack)
+    {
+        *stack = new_node;
+    }
+    else
+    {
+        t_stack *last = stack_last(*stack);
+        last->next = new_node;
+    }
 }
