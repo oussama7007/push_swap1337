@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/09 10:34:08 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/10 00:51:17 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,9 @@ void     clean_and_exit(t_stack **a, t_stack **b, int exit_code);
 //*** Algorithms ***
 
 //*** utils */
-
+void add_to_stack(t_stack **stack, int value);
 //*** Commands ***
+t_stack *parse_input(int ac, char **av);
 void    push_b(t_stack **b, t_stack **a);
 void    push_a(t_stack **a, t_stack **b);
 void    swap_b(t_stack **b);
