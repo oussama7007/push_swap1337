@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 17:29:34 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/09 20:57:28 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/10 10:29:03 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 #define LIBFT_H
 
 int ft_atoi(char *str);
-int ft_isdigit(char c)
+int ft_isdigit(char c);
 #endif

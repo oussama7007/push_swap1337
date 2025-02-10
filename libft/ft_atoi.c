@@ -6,28 +6,27 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:53:13 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/08 17:37:55 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/10 10:18:39 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
 
-static int check_num(int result, char c, int sign)
+static int check_num(long result, char c, int sign)
 {
-    int test;
+    long test = result;
     
-    test = result;
     result = (result * 10 + (c - 48)) * sign;
-    if(result <= test)
+    if(result /10 != test)
         return 0;
-    else    
+    else
         return 1;
 }
 
 int ft_atoi(char *str)
 {
-    int result;
+    long result;
     int i;
     int sign;
 
