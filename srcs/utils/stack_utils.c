@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:28:53 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/10 00:43:41 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/12 16:07:36 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,7 @@ int     stack_size(t_stack *stack)
     }
     return(size);
 }
-t_stack *stack_last(t_stack *stack)
-{
-    if (!stack)
-        return (NULL);
-    while (stack->next)
-        stack = stack->next;
-    return (stack);
-}
+
 int	stack_min(t_stack *stack)
 {
     int	min;
