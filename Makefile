@@ -23,7 +23,7 @@ INCLUDES = -I includes
 
 all: $(NAME)
 
-NAME: $(objcts)
+$(NAME): $(objcts) 
 	$(CC) $(CFLAGS) $(objcts) -o $(NAME)
 
 %.o:%.c 

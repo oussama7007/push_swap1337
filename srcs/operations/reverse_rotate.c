@@ -6,12 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 10:46:27 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/01 15:42:45 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/10 14:48:38 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/mnt/homes/oait-si-/Desktop/push__swap/includes/push_swap.h"
-
+#include "../includes/push_swap.h"
 
 static void    reverse_rotate(t_stack **stack)
 {

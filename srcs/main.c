@@ -6,12 +6,12 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:58:00 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/09 11:10:15 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/10 14:43:56 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "/mnt/homes/oait-si-/Desktop/push__swap/includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 int main(int ac, char **av)
 {
