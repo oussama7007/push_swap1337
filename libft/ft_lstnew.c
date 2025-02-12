@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 17:29:34 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/12 18:10:23 by oait-si-         ###   ########.fr       */
+/*   Created: 2025/02/12 16:12:02 by oait-si-          #+#    #+#             */
+/*   Updated: 2025/02/12 16:44:25 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <limits.h>
-#include <stdbool.h>
-#include <stdio.h>
-
-typedef struct s_stack
+t_stack     *ft_lstnew(int value)
 {
-    int     value;
-    struct s_stack    *next;
-} t_stack;
-
-void ft_lstadd_back(t_stack **stack, int value);
-t_stack     *ft_lstnew(int value);
-t_stack *stack_last(t_stack *stack);
-int ft_atoi(char *str);
-int ft_isdigit(char c);
-#endif
+    t_stack *new_node;
+    
+    new_node = (t_stack *)malloc(sizeof(t_stack));
+    if(!new_node)
+        return NULL;
+    new_node->value = value ;
+    new_node->next = NULL ;
+    return (new_node);
+}

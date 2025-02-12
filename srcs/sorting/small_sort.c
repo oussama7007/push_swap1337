@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:00:00 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/12 17:25:58 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:14:25 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void    sort_three(t_stack **a)
 {
-    t_stack *first;
-    t_stack *second;
-    t_stack *third;
+    int first;
+    int  second;
+    int  third;
     
     if(!*a || !((*a)->next) ||((*a)->next->next))
         return;
@@ -39,25 +39,25 @@ void    sort_three(t_stack **a)
     else if (first > second && third > second)
         swap_a(a);
 }
-void    print_stack(t_stack *a)
-{
-    while (a)
-    {
-        printf("%d", a->value);
-        a = a->next;
-    }
-    printf("\n");
-}
-int main()
-{
-    t_stack *stack = NULL;
-    ft_lstadd_back(&stack, ft_lstnew(3));
-    ft_lstadd_back(&stack, ft_lstnew(2));
-    ft_lstadd_back(&stack, ft_lstnew(1));
-    printf("before: ");
-    printf_stack(stack);
-    sort_three(&stack);
-    printf("After: ");
-    print_stack(stack);
-    clean_stacks(&stack, NULL);
-}
+// static void    print_stack(t_stack *a)
+// {
+//     while (a)
+//     {
+//         printf("%d", a->value);
+//         a = a->next;
+//     }
+//     printf("\n");
+// }
+// int main()
+// {
+//     t_stack *stack = NULL;
+//     ft_lstadd_back(&stack, ft_lstnew(3));
+//     ft_lstadd_back(&stack, ft_lstnew(2));
+//     ft_lstadd_back(&stack, ft_lstnew(1));
+//     printf("before: ");
+//     print_stack(stack);
+//     sort_three(&stack);
+//     printf("After: ");
+//     print_stack(stack);
+//     clean_stacks(&stack, NULL);
+// }

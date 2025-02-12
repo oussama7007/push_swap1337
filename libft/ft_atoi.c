@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:53:13 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/10 10:18:39 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/12 18:11:58 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int ft_atoi(char *str)
     int i;
     int sign;
 
+    i = 0;
     while (str[i] != '\0' || str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
         i++;
     if(str[i] == '-' || str[i] == '+')
@@ -41,7 +42,7 @@ int ft_atoi(char *str)
         i++;
     }
     result = 0;
-    while (str[i] || str[i] >= '0' && str[i] <= '9')
+    while (str[i] || (str[i] >= '0' && str[i] <= '9'))
     {
         result *= 10 + (str[i] - 48);
         i++;
