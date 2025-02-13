@@ -25,7 +25,7 @@ typedef struct s_stack
     struct s_stack    *next;
 } t_stack;
 
-void ft_lstadd_back(t_stack **stack, int value);
+void ft_lstadd_back(t_stack **stack, t_stack *new);
 t_stack     *ft_lstnew(int value);
 t_stack *stack_last(t_stack *stack);
 int ft_atoi(char *str);

@@ -15,7 +15,10 @@ SRCS = srcs/main.c \
        srcs/utils/stack_utils.c \
        srcs/utils/error_utils.c \
 	   libft/ft_atoi.c \
-	   libft/ft_isdigit.c
+	   libft/ft_isdigit.c\
+	   libft/ft_lstadd_back.c \
+	   libft/ft_lstnew.c \
+	   libft/ft_lstlast.c
 
 objcts = $(SRCS:.c=.o)
 

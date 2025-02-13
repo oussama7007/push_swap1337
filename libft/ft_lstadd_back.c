@@ -12,20 +12,17 @@
 
 #include "libft.h"
 
-void ft_lstadd_back(t_stack **stack, int value)
+void ft_lstadd_back(t_stack **stack, t_stack *new)
 {
-    t_stack *new_node = (t_stack *)malloc(sizeof(t_stack));
-    if (!new_node)
-        return;
-    new_node->value = value;
-    new_node->next = NULL;
+    t_stack *temp;
+
     if (!*stack)
     {
-        *stack = new_node;
+        *stack = new;
+        return;
     }
-    else
-    {
-        t_stack *last = stack_last(*stack);
-        last->next = new_node;
-    }
+    temp = *stack;
+    while (temp->next)
+        temp = temp->next;
+    temp->next = new;
 }

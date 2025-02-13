@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/12 18:10:35 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/13 02:15:59 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,16 @@
 //*** Stack creation ***
 
 //*** linked list utils ***
-int	            is_sorted(t_stack *stack);
-void            free_stack(t_stack *stack);
-int             stack_size(t_stack *stack);
-t_stack         *stack_last(t_stack *stack);
-int             stack_min(t_stack *stack);
-int    sort_stack(t_stack **a, t_stack **b);
+int is_sorted(t_stack *stack);
+void free_stack(t_stack *stack);
+int stack_size(t_stack *stack);
+t_stack *stack_last(t_stack *stack);
+int stack_min(t_stack *stack);
+int sort_stack(t_stack **a, t_stack **b);
 int handle_error(t_stack **a, t_stack **b);
-void     clean_and_exit(t_stack **a, t_stack **b, int exit_code);
+void clean_and_exit(t_stack **a, t_stack **b, int exit_code);
 //*** Algorithms ***
+int sort_stack(t_stack **a, t_stack **b);
 
 //*** utils */
 

@@ -56,7 +56,7 @@ t_stack *parse_input(int ac, char **av)
             free_stack(stack);
             return NULL;
         }
-        add_to_stack(&stack, num);
+        ft_lstadd_back(&stack, ft_lstnew(num));
         i++;
     }
     return stack;
