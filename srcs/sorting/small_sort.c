@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:00:00 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/13 03:53:06 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:38:29 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,17 @@ void    push_smallet_to_b(t_stack **a, t_stack **b)
         rotate_a(a);
     push_b(a, b);
 }
+
 void    sort_five(t_stack **a, t_stack **b)
 {
+    int size = stack_size(*a);
+    if(size != 5)
+        return;
     
+    push_smallet_to_b(a, b);
+    push_smallet_to_b(a, b);
+    sort_three(a);
+    
+    push_a(a, b);
+    push_a(a, b);
 }

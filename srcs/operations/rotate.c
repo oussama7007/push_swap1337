@@ -6,13 +6,13 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 11:51:46 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/10 14:48:44 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:46:01 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void    rotate(t_stack **stack)
+static void    rotate(t_stack **stack)
 {
         t_stack *first;
         t_stack *last;

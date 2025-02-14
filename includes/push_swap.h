@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/13 02:15:59 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/13 14:47:19 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,10 @@ int sort_stack(t_stack **a, t_stack **b);
 int handle_error(t_stack **a, t_stack **b);
 void clean_and_exit(t_stack **a, t_stack **b, int exit_code);
 //*** Algorithms ***
-int sort_stack(t_stack **a, t_stack **b);
-
+int     sort_stack(t_stack **a, t_stack **b);
+void    sort_five(t_stack **a, t_stack **b);
+void    push_smallet_to_b(t_stack **a, t_stack **b);
+void    sort_three(t_stack **a);
 //*** utils */
 
 int    sort_stack(t_stack **a, t_stack **b);
@@ -55,6 +57,9 @@ void     swap_a(t_stack **a);
 void    reverse_rotate_a(t_stack **a);
 void    reverse_rotate_b(t_stack **b);
 void    reverse_rotate_ab(t_stack **a, t_stack **b);
+void   rotate_a(t_stack **a);
+void    rotate_b(t_stack **b);
+void    rotate_ab(t_stack **a, t_stack **b);
 
 // push_swap/
 // ├── includes/
