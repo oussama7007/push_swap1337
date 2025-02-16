@@ -6,12 +6,21 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:18:49 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/10 10:19:19 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/16 03:27:22 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+
+
+int is_valid_int(char *str)
+{
+    long num = ft_atoi(str);
+    if(num < INT_MIN || num > INT_MAX)
+        return 0;
+    return 1;
+}
 int is_number(char *str)
 {
     int i;
@@ -31,7 +40,6 @@ int is_number(char *str)
 int check_duplicates(t_stack *stack, int num)
 {
     t_stack *tmp;
-    tmp = stack;
     while(tmp)
     {
         if(tmp->value == num)
@@ -40,6 +48,7 @@ int check_duplicates(t_stack *stack, int num)
     }
     return 1;
 }
+
 t_stack *parse_input(int ac, char **av)
 {
     t_stack *stack = NULL;
@@ -48,6 +57,20 @@ t_stack *parse_input(int ac, char **av)
 
     while (i < ac)
     {
+        char **split = ft_split(av[i], ' ');
+        int j = 0;
+        while (split[j])
+        {
+            if(!is_number(split[j]) || !is_valid_int(split[j]))
+            {
+                free_split(split);
+                free_stack(stack);
+                return NULL;
+            }
+            
+            j++;
+        }
+        
         if (!is_number(av[i]))
             return NULL;
         num = ft_atoi(av[i]);
