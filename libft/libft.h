@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 17:29:34 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/16 03:25:33 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/16 15:24:06 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ t_stack     *ft_lstnew(int value);
 t_stack *stack_last(t_stack *stack);
 int ft_atoi(char *str);
 int ft_isdigit(char c);
+char **ft_split(char *str, char c);
 #endif

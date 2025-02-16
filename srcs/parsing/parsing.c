@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:18:49 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/16 03:27:22 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/16 15:29:36 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,19 +67,17 @@ t_stack *parse_input(int ac, char **av)
                 free_stack(stack);
                 return NULL;
             }
-            
-            j++;
+  
+            num = ft_atoi(split[j]);
+            if (!check_duplicates(stack, num))
+            {
+                free_split(split);
+                free_stack(stack);
+                return NULL;
+            }
+            ft_lstadd_back(&stack, ft_lstnew(num));
         }
-        
-        if (!is_number(av[i]))
-            return NULL;
-        num = ft_atoi(av[i]);
-        if (!check_duplicates(stack, num))
-        {
-            free_stack(stack);
-            return NULL;
-        }
-        ft_lstadd_back(&stack, ft_lstnew(num));
+        free_split(split);
         i++;
     }
     return stack;

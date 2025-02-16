@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 22:54:55 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/16 06:49:16 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/16 15:22:45 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int ft_word_count(char *str, char c)
             in_word = 1;
             count++;
         }
-        else 
+        else if(str[i] == c)
             in_word = 0;
         i++;
     }
@@ -71,6 +71,8 @@ char **fill_result(char *str, char c, char **new)
     {
         while(str[i] && str[i] == c)
             i++;
+        if (str[i] == '\0') 
+            break;
         start = i;
         while(str[i] && str[i] != c)
             i++;
@@ -84,9 +86,6 @@ char **fill_result(char *str, char c, char **new)
             }
             j++;
         }
-        if (str[i] == '\0')
-            break;
-        i++;
     }
     new[j] = NULL; 
     return new;
@@ -103,27 +102,4 @@ char **ft_split(char *str, char c)
         return NULL;
     char **result = fill_result(str, c, new);
     return result;
-}
-void tst()
-{
-    system("leaks a.out");
-}
-int main()
-{
-    // atexit(tst);
-    int i = 0;
-    char *str = "     oussama ait si ha\tmou          ";
-    char **rsult = ft_split(str, ' ');
-    while(rsult[i] )
-    {
-        printf("%s\n", rsult[i]);
-        i++;
-    }
-    i = 0;
-    while(rsult[i])
-    {
-        free(rsult[i]);
-        i++;
-    }
-    free(rsult);
 }
