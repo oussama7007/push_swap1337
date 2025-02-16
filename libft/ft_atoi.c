@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:53:13 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/12 18:11:58 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/15 22:19:34 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int check_num(long result, char c, int sign)
         return 1;
 }
 
-int ft_atoi(char *str)
+int     ft_atoi(char *str)
 {
     long result;
     int i;
@@ -42,7 +42,7 @@ int ft_atoi(char *str)
         i++;
     }
     result = 0;
-    while (str[i] || (str[i] >= '0' && str[i] <= '9'))
+    while (str[i] && ft_isdigit(str[i]))
     {
         result *= 10 + (str[i] - 48);
         i++;
@@ -51,3 +51,4 @@ int ft_atoi(char *str)
     }
     return (sign * result);
 }
+
