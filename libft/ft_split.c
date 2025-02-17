@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 22:54:55 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/16 15:22:45 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/17 05:02:11 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ static int ft_word_count(char *str, char c)
     }
     return count;
 }
+
 static char *ft_worddup(int start, int i, char *str)
 {
     char *new;
@@ -52,13 +53,13 @@ static char *ft_worddup(int start, int i, char *str)
     return new;
 }
 
-static void    free_buffer(char **new, int index)
+static void free_buffer(char **new, int index)
 {
     while (index > 0)
         free(new[--index]);
     free(new); 
-    
 }
+
 char **fill_result(char *str, char c, char **new)
 {
     int start;
@@ -90,7 +91,6 @@ char **fill_result(char *str, char c, char **new)
     new[j] = NULL; 
     return new;
 }
-
 
 char **ft_split(char *str, char c)
 {

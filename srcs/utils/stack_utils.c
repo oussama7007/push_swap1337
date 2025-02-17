@@ -6,53 +6,52 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:28:53 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/13 02:22:05 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/17 05:41:17 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
- 
-int	is_sorted(t_stack *stack)
+
+int is_sorted(t_stack *stack)
 {
-	while (stack && stack->next)
-	{
-		if (stack->value > stack->next->value)
-			return (0);
-		stack = stack->next;
-	}
-	return (1);
+    while (stack && stack->next)
+    {
+        if (stack->value > stack->next->value)
+            return 0;
+        stack = stack->next;
+    }
+    return 1;
 }
 
-void    free_stack(t_stack *stack)
+void free_stack(t_stack *stack)
 {
     t_stack *tmp;
-    while(stack)
+
+    while (stack)
     {
         tmp = stack;
         stack = stack->next;
-        free(tmp); 
+        free(tmp);
     }
 }
 
-int     stack_size(t_stack *stack)
+int stack_size(t_stack *stack)
 {
-    int size;
-
-    size = 0;
-    while(stack)
+    int size = 0;
+    while (stack)
     {
         size++;
         stack = stack->next;
     }
-    return(size);
+    return size;
 }
 
-int	stack_min(t_stack *stack)
+int stack_min(t_stack *stack)
 {
-    int	min;
+    int min;
 
     if (!stack)
-        return (0);
+        return 0;
     min = stack->value;
     while (stack)
     {
@@ -60,27 +59,31 @@ int	stack_min(t_stack *stack)
             min = stack->value;
         stack = stack->next;
     }
-    return (min);
+    return min;
 }
-int    sort_stack(t_stack **a, t_stack **b)
-{
-    int size;
 
-      
-    size = stack_size(*a);
+int sort_stack(t_stack **a, t_stack **b)
+{
+    int size = stack_size(*a);
+
     if (!*a || !(*a)->next)
-        return (0);
-    if(is_sorted(*a))
         return 0;
-    else if(size == 2)
+    if (is_sorted(*a))
+        return 0;
+    else if (size == 2)
         swap_a(a);
     else if (size == 3)
         sort_three(a);
-    else if(size == 5)
+    else if (size == 4)
+        sort_four(a, b);
+    else if (size == 5)
         sort_five(a, b);
-    else 
+    else if (size <= 10)
+        sort_medium(a, b);
+    else
         quick_sort(a, b);
+    
     if (!is_sorted(*a))
-        return (1);
-    return (0);
+        return 1;
+    return 0;
 }

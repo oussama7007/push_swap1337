@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/13 14:47:19 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/17 05:41:32 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,13 @@
 //*** Handle input ./push_swap "1 -42 1337" ***
 
 //*** Handle errors-free ***
+t_stack *parse_input(int ac, char **av);
+void    free_split(char **split);
 
 //*** Stack creation ***
 
 //*** linked list utils ***
+
 int is_sorted(t_stack *stack);
 void free_stack(t_stack *stack);
 int stack_size(t_stack *stack);
@@ -38,16 +41,20 @@ int stack_min(t_stack *stack);
 int sort_stack(t_stack **a, t_stack **b);
 int handle_error(t_stack **a, t_stack **b);
 void clean_and_exit(t_stack **a, t_stack **b, int exit_code);
+
 //*** Algorithms ***
 int     sort_stack(t_stack **a, t_stack **b);
 void    sort_five(t_stack **a, t_stack **b);
-void    push_smallet_to_b(t_stack **a, t_stack **b);
+void push_smallest_to_b(t_stack **a, t_stack **b);
 void    sort_three(t_stack **a);
+void    sort_four(t_stack **a, t_stack **b);
+void sort_medium(t_stack **a, t_stack **b);
 //*** utils */
-
 int    sort_stack(t_stack **a, t_stack **b);
 int	stack_min(t_stack *stack);
 void clean_stacks(t_stack **a, t_stack **b);
+void quick_sort(t_stack **a, t_stack **b);
+int find_pivot(t_stack *stack);
 //*** Commands ***
 t_stack *parse_input(int ac, char **av);
 void    push_b(t_stack **b, t_stack **a);
@@ -85,4 +92,5 @@ void    rotate_ab(t_stack **a, t_stack **b);
 // │   ├── main.c
 // ├── libft/
 // └── makefile 
+
 #endif
