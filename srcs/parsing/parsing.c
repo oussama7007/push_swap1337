@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:18:49 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/17 06:05:21 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/17 21:06:22 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int is_number(char *str)
     i = 0;
     if (str[i] == '-' || str[i] == '+')
         i++;
-    if (!str[i])  // Check if string is only '-' or '+'
+    if (!str[i])
         return 0;
     while (str[i])
     {
@@ -38,15 +38,10 @@ int is_number(char *str)
 }
 int check_duplicates(t_stack *stack, int num)
 {
-    t_stack *tmp;
-    int count = 0;
-
-    tmp = stack;
+    t_stack *tmp = stack;
     while (tmp)
     {
         if (tmp->value == num)
-            count++;
-        if (count > 1)
             return 1;
         tmp = tmp->next;
     }
@@ -77,6 +72,7 @@ t_stack *parse_input(int ac, char **av)
             num = ft_atoi(split[j]);
             if (check_duplicates(stack, num))
             {
+                printf("duplicatr found: %d\n", num); // dubuug 
                 free_split(split);
                 free_stack(stack);
                 return NULL;

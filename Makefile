@@ -1,6 +1,6 @@
 NAME  = push_swap
 CC = cc 
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -g
 
 SRCS = srcs/main.c \
        srcs/operations/push.c \
