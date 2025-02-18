@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 17:29:34 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/17 04:38:54 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/18 03:56:25 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 typedef struct s_stack
 {
+    int     index;
     int     value;
     struct s_stack    *next;
 } t_stack;

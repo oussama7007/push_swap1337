@@ -6,33 +6,35 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 22:03:32 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/17 05:40:56 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/18 06:43:24 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void sort_medium(t_stack **a, t_stack **b)
+void add_index(t_stack **a)
 {
-    int size = stack_size(*a);
-    int i;
-    int middle = size / 2;
-
-    // Push smaller half to stack b
-    i = 0;
-    while (i < middle)
+    int i = 0;
+    int count = 0;
+    t_stack *tmp;
+    t_stack *first;
+    tmp = *a;
+    first = *a;
+    while(tmp)
     {
-        push_smallest_to_b(a, b);
-        i++;
+        *a = first;   
+        int value = tmp->value;
+        while(i < stack_size(*a))
+        {
+            *a = (*a)->next;
+            if(value > (*a)->value)
+            {
+                count++;
+            }
+            i++;   
+        }
+        tmp->index = count;
+        tmp = tmp->next;
+        count = 0;
     }
-
-    // Sort remaining elements in stack a
-    if (size - middle <= 3)
-        sort_three(a);
-    else
-        quick_sort(a, b);
-
-    // Push back elements from b to a
-    while (*b)
-        push_a(a, b);
 }
