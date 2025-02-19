@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:18:49 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/17 21:06:22 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/18 17:47:40 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ t_stack *parse_input(int ac, char **av)
             num = ft_atoi(split[j]);
             if (check_duplicates(stack, num))
             {
-                printf("duplicatr found: %d\n", num); // dubuug 
                 free_split(split);
                 free_stack(stack);
                 return NULL;

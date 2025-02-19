@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:28:53 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/17 05:41:17 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/19 05:29:10 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,8 @@ int sort_stack(t_stack **a, t_stack **b)
         sort_four(a, b);
     else if (size == 5)
         sort_five(a, b);
-    else if (size <= 10)
-        sort_medium(a, b);
     else
-        quick_sort(a, b);
-    
+        sort_medium(a, b);
     if (!is_sorted(*a))
         return 1;
     return 0;

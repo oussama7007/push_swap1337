@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/17 05:41:32 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/19 05:17:58 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,15 @@ void    sort_five(t_stack **a, t_stack **b);
 void push_smallest_to_b(t_stack **a, t_stack **b);
 void    sort_three(t_stack **a);
 void    sort_four(t_stack **a, t_stack **b);
+void push_max_to_a(t_stack **a, t_stack **b);
 void sort_medium(t_stack **a, t_stack **b);
+void    push_to_b(t_stack **a, t_stack **b);
+
+void    assign_indexes(t_stack **stack);
+void    insertion_sort(int *arr, int len);
+
+
+
 //*** utils */
 int    sort_stack(t_stack **a, t_stack **b);
 int	stack_min(t_stack *stack);
