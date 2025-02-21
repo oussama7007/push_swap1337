@@ -6,12 +6,13 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 18:39:56 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/09 20:55:38 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/21 04:10:17 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isdigit(char c)
+
+int	ft_isdigit(char c)
 {
-    return(c <= '9' && c >= '0');
+	return (c <= '9' && c >= '0');
 }
