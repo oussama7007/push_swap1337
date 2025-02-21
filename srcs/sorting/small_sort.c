@@ -6,7 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:00:00 by oait-si-          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2025/02/20 03:33:52 by oait-si-         ###   ########.fr       */
+=======
+/*   Updated: 2025/02/21 02:02:06 by oait-si-         ###   ########.fr       */
+>>>>>>> well done
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +52,17 @@ void	push_smallest_to_b(t_stack **a, t_stack **b)
 
 	if (!*a)
 		return ;
+<<<<<<< HEAD
 	min_index = 0;
 	min_value = stack_min(*a);
 	tmp = *a;
 	size = stack_size(*a);
+=======
+	min_value = stack_min(*a);
+	tmp = *a;
+	size = stack_size(*a);
+	min_index = 0;
+>>>>>>> well done
 	while (tmp && tmp->value != min_value)
 	{
 		min_index++;
@@ -86,4 +97,8 @@ void	sort_five(t_stack **a, t_stack **b)
 	push_smallest_to_b(a, b);
 	sort_three(a);
 	push_a(a, b);
+<<<<<<< HEAD
+=======
+	push_a(a, b);
+>>>>>>> well done
 }
