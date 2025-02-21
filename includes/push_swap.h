@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/21 04:00:39 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/21 06:29:56 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,12 @@
 # include <stdio.h>
 # include "../libft/libft.h"
 
-// *** Handle input ./push_swap "1 -42 1337" ***
-
 // *** Handle errors-free ***
 t_stack	*parse_input(int ac, char **av);
 void	free_split(char **split);
+t_stack	*parse_input(int ac, char **av);
 
-// *** Stack creation ***
-
-// *** linked list utils ***
+// *** Linked list utils ***
 int		is_sorted(t_stack *stack);
 void	free_stack(t_stack *stack);
 int		stack_size(t_stack *stack);
@@ -47,19 +44,23 @@ void	sort_four(t_stack **a, t_stack **b);
 void	push_max_to_a(t_stack **a, t_stack **b);
 void	sort_medium(t_stack **a, t_stack **b);
 void	push_to_b(t_stack **a, t_stack **b);
-
+int		find_index(int *sorted_arr, int size, int value);
 void	assign_indexes(t_stack **stack);
 void	insertion_sort(int *arr, int len);
+int		get_range(int size);
+int		find_max_index_position(t_stack *b);
 
-// *** utils ***
+// *** Utils ***
 int		sort_stack(t_stack **a, t_stack **b);
 int		stack_min(t_stack *stack);
 void	clean_stacks(t_stack **a, t_stack **b);
 void	quick_sort(t_stack **a, t_stack **b);
 int		find_pivot(t_stack *stack);
+int		check_duplicates(t_stack *stack, int num);
+int		is_valid_int(char *str);
+int		is_number(char *str);
 
 // *** Commands ***
-t_stack	*parse_input(int ac, char **av);
 void	push_b(t_stack **b, t_stack **a);
 void	push_a(t_stack **a, t_stack **b);
 void	swap_b(t_stack **b);

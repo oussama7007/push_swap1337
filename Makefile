@@ -11,7 +11,6 @@ SRCS = srcs/main.c \
        srcs/parsing/parsing_utils.c \
        srcs/sorting/sort_utils.c \
        srcs/sorting/small_sort.c \
-       srcs/sorting/large_sort.c \
        srcs/sorting/medium_sort.c \
        srcs/utils/stack_utils.c \
        srcs/utils/error_utils.c \
