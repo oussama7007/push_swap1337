@@ -24,10 +24,12 @@ objcts = $(SRCS:.c=.o)
 
 INCLUDES = -I includes
 
-all: $(NAME)
+
 
 $(NAME): $(objcts) 
 	$(CC) $(CFLAGS) $(objcts) -o $(NAME)
+all: $(NAME)
+
 
 %.o:%.c 
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
@@ -36,6 +38,8 @@ clean:
 	rm -f $(objcts)
 fclean: clean 
 	rm -f $(NAME)
+
+
 
 re : fclean all
 

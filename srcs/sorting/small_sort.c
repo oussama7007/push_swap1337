@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:00:00 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/21 06:25:30 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/22 10:06:45 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ void	push_smallest_to_b(t_stack **a, t_stack **b)
 	int		min_index;
 	int		size;
 
-	if (!*a)
-		return ;
 	min_value = stack_min(*a);
 	tmp = *a;
 	min_index = 0;
@@ -69,8 +67,6 @@ void	push_smallest_to_b(t_stack **a, t_stack **b)
 
 void	sort_four(t_stack **a, t_stack **b)
 {
-	if (!*a || !(*a)->next || !(*a)->next->next || !(*a)->next->next->next)
-		return ;
 	push_smallest_to_b(a, b);
 	sort_three(a);
 	push_a(a, b);
