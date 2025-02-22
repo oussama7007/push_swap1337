@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 17:29:34 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/21 04:04:11 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/22 08:39:37 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
-# include <stdbool.h>
-# include <stdio.h>
 
 typedef struct s_stack
 {
