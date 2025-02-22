@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 22:03:32 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/21 06:33:41 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/22 16:03:09 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	push_to_b(t_stack **a, t_stack **b)
 	while (size > 0)
 	{
 		current_index = (*a)->index;
-		if (current_index <= i++)
+		if (current_index <= ++i)
 			push_b(b, a);
 		else if (current_index <= i + range)
 		{
