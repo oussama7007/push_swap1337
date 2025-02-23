@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 06:15:55 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/21 06:26:06 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/23 12:32:35 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,25 @@ int	find_max_index_position(t_stack *b)
 		b = b->next;
 	}
 	return (max_pos);
+}
+
+void	insertion_sort(int *arr, int len)
+{
+	int	i;
+	int	key;
+	int	j;
+
+	i = 0;
+	while (i < len)
+	{
+		key = arr[i];
+		j = i - 1;
+		while (j >= 0 && arr[j] > key)
+		{
+			arr[j + 1] = arr[j];
+			j--;
+		}
+		arr[j + 1] = key;
+		i++;
+	}
 }

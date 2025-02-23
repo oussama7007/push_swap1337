@@ -6,32 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 22:03:32 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/22 16:03:09 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/23 12:47:15 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
-void	insertion_sort(int *arr, int len)
-{
-	int	i;
-	int	key;
-	int	j;
-
-	i = 0;
-	while (i < len)
-	{
-		key = arr[i];
-		j = i - 1;
-		while (j >= 0 && arr[j] > key)
-		{
-			arr[j + 1] = arr[j];
-			j--;
-		}
-		arr[j + 1] = key;
-		i++;
-	}
-}
 
 void	assign_indexes(t_stack **stack)
 {
@@ -48,9 +27,8 @@ void	assign_indexes(t_stack **stack)
 	tmp = *stack;
 	while (i < size)
 	{
-		values[i] = tmp->value;
+		values[i++] = tmp->value;
 		tmp = tmp->next;
-		i++;
 	}
 	insertion_sort(values, size);
 	tmp = *stack;
@@ -62,29 +40,38 @@ void	assign_indexes(t_stack **stack)
 	free(values);
 }
 
+static void	handel_push(int *i, int range, t_stack **a, t_stack **b)
+{
+	int	current_index;
+
+	current_index = (*a)->index;
+	if (current_index <= *i)
+	{
+		push_b(b, a);
+		(*i)++;
+	}
+	else if (current_index <= *i + range)
+	{
+		push_b(b, a);
+		rotate_b(b);
+		(*i)++;
+	}
+	else
+		rotate_a(a);
+}
+
 void	push_to_b(t_stack **a, t_stack **b)
 {
-	int		i;
-	int		size;
-	int		range;
-	int		current_index;
+	int	i;
+	int	size;
+	int	range;
 
 	i = 0;
 	size = stack_size(*a);
 	range = get_range(size);
 	while (size > 0)
 	{
-		current_index = (*a)->index;
-		if (current_index <= ++i)
-			push_b(b, a);
-		else if (current_index <= i + range)
-		{
-			push_b(b, a);
-			rotate_b(b);
-			i++;
-		}
-		else
-			rotate_a(a);
+		handel_push(&i, range, a, b);
 		size = stack_size(*a);
 	}
 }
