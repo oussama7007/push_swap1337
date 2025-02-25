@@ -6,23 +6,21 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/22 08:44:35 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/25 02:47:09 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
+
 # include "../libft/libft.h"
 
 // *** Handle errors-free ***
 t_stack	*parse_input(int ac, char **av);
 void	free_split(char **split);
 t_stack	*parse_input(int ac, char **av);
-
+int check_for_empty_arg(int ac, char **av);
 // *** Linked list utils ***
 int		is_sorted(t_stack *stack);
 void	free_stack(t_stack *stack);
