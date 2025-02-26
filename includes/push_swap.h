@@ -6,13 +6,12 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 15:29:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/25 02:47:09 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 05:10:40 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
 
 # include "../libft/libft.h"
 
@@ -20,7 +19,8 @@
 t_stack	*parse_input(int ac, char **av);
 void	free_split(char **split);
 t_stack	*parse_input(int ac, char **av);
-int check_for_empty_arg(int ac, char **av);
+int		check_for_empty_arg(int ac, char **av);
+
 // *** Linked list utils ***
 int		is_sorted(t_stack *stack);
 void	free_stack(t_stack *stack);
@@ -45,6 +45,8 @@ void	assign_indexes(t_stack **stack);
 void	insertion_sort(int *arr, int len);
 int		get_range(int size);
 int		find_max_index_position(t_stack *b);
+void	hendel_nearly_reverse(t_stack **a, t_stack **b, int *i, int range);
+int		check_reverse_sorted(int size, t_stack *a);
 
 // *** Utils ***
 int		sort_stack(t_stack **a, t_stack **b);

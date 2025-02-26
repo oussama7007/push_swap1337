@@ -6,12 +6,12 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 22:54:55 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/25 02:35:16 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 05:15:13 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include  <stdio.h>
+
 static int	ft_wordcount(const char *str, char delim)
 {
 	int	count;

@@ -6,11 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 16:18:49 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/21 06:14:12 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 05:17:11 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static int	process_elements(char *str, t_stack **stack)
 {

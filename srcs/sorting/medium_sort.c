@@ -6,7 +6,7 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 22:03:32 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/23 12:47:15 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 05:14:30 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,15 @@ void	push_to_b(t_stack **a, t_stack **b)
 	i = 0;
 	size = stack_size(*a);
 	range = get_range(size);
+	if (check_reverse_sorted(size, *a))
+	{
+		while (size > 0)
+		{
+			hendel_nearly_reverse(a, b, &i, range);
+			size = stack_size(*a);
+		}
+		return ;
+	}
 	while (size > 0)
 	{
 		handel_push(&i, range, a, b);

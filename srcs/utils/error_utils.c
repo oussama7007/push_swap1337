@@ -6,11 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 10:34:46 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/25 02:59:13 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 05:13:10 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int	handle_error(t_stack **a, t_stack **b)
 {
@@ -27,52 +27,64 @@ void	clean_stacks(t_stack **a, t_stack **b)
 	*b = NULL;
 }
 
-// int check_for_empty_arg(int ac, char **av)
-// {
-// 	int is_empty = 0;
-// 	int i = 0;
-// 	int j = 1;
-// 	while(j < ac)
-// 	{
-// 		i = 0;
-// 		is_empty = 0;
-// 		while(av[j][i])
-// 		{
-// 			if(av[j][i] != ' ')
-// 				is_empty = 1;
-// 			if(av[j][i + 1] == '\0' && is_empty == 0)
-// 				return 0;
-// 			i++;
-// 		}
-// 		j++;
-// 	}
-// 	return 1;
-// }
-int check_for_empty_arg(int ac, char **av)
+int	check_for_empty_arg(int ac, char **av)
 {
-    int j = 1;
+	int	j;
+	int	i;
+	int	is_empty;
 
-    while (j < ac)
-    {
-        int i = 0;
-        int is_empty = 0;
+	j = 1;
+	while (j < ac)
+	{
+		i = 0;
+		is_empty = 0;
+		if (av[j][0] == '\0')
+			return (0);
+		while (av[j][i])
+		{
+			if (av[j][i] != ' ')
+				is_empty = 1;
+			i++;
+		}
+		if (is_empty == 0)
+			return (0);
+		j++;
+	}
+	return (1);
+}
 
-        // Handle empty string arguments (e.g., "")
-        if (av[j][0] == '\0')
-            return (0);
+int	check_reverse_sorted(int size, t_stack *a)
+{
+	t_stack	*tmp;
+	int		count;
 
-        while (av[j][i])
-        {
-            if (av[j][i] != ' ')
-                is_empty = 1;
-            i++;
-        }
+	tmp = a;
+	count = 0;
+	while (tmp->next)
+	{
+		if (tmp->index > tmp->next->index)
+			count++;
+		tmp = tmp->next;
+	}
+	return (count > size / 2);
+}
 
-        // Check if the entire argument was spaces
-        if (is_empty == 0)
-            return (0);
+void	hendel_nearly_reverse(t_stack **a, t_stack **b, int *i, int range)
+{
+	int	current_index;
 
-        j++;
-    }
-    return (1);
+	current_index = (*a)->index;
+	if (current_index <= *i)
+	{
+		push_b(b, a);
+		(*i)++;
+	}
+	else if (current_index <= *i + range)
+	{
+		push_b(b, a);
+		rotate_b(b);
+		(*i)++;
+	}
+	else
+		reverse_rotate_a(a);
 }

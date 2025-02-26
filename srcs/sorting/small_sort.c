@@ -6,12 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 15:00:00 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/22 14:03:16 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 02:43:44 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-#include <stdio.h>
 
 void	sort_three(t_stack **a)
 {

@@ -6,21 +6,20 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:58:00 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/25 03:02:46 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 05:15:38 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-//void t(void){system("leaks push_swap");}
+
 int	main(int ac, char **av)
 {
-	//atexit(t);
 	t_stack	*a;
 	t_stack	*b;
 
 	if (ac < 2)
 		return (0);
-	if(check_for_empty_arg(ac, av) == 0)
+	if (check_for_empty_arg(ac, av) == 0)
 	{
 		write(2, "Error\n", 6);
 		return (0);

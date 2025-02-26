@@ -6,11 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 15:32:47 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/22 08:44:29 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 05:17:16 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	free_split(char **split)
 {

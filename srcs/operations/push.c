@@ -6,11 +6,11 @@
 /*   By: oait-si- <oait-si-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 10:46:20 by oait-si-          #+#    #+#             */
-/*   Updated: 2025/02/21 04:12:57 by oait-si-         ###   ########.fr       */
+/*   Updated: 2025/02/26 05:16:04 by oait-si-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 static void	push(t_stack **dest, t_stack **src)
 {
