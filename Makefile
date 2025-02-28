@@ -26,7 +26,7 @@ INCLUDES = -I includes
 
 
 
-$(NAME): $(objcts) 
+$(NAME): $(objcts) includes/push_swap.h
 	$(CC) $(CFLAGS) $(objcts) -o $(NAME)
 all: $(NAME)
 
